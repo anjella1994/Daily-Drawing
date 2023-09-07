@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*--------------------------------------전체 레이아웃--------------------------------------*/
+body {
+    background-color:#fafbf5;
+    margin:0;
+}
+header {
+    background-color:#fafbf5;
+    width:100%;
+    height:300px;                                               /*미디어쿼리 변경값*/
+    position:relative;
+}
+main {
+    width:100%;                                            
+    height:1150px;                                              /*미디어쿼리 변경값*/
+    position:relative;
+}
+footer {
+    width:100%;
+    height:260px;                                               /*미디어쿼리 변경값*/
+    position:relative;
+}
+
+/*--------------------------------------헤더 레이아웃--------------------------------------*/
+#menu {
+    width:100%;                                                 
+    height:85px;                                                /*미디어쿼리 변경값*/
+    box-sizing:border-box;
+    padding:60px 100px 0;                                       /*미디어쿼리 변경값*/
+    margin:0;             
+    position:relative;          
+}
+#title {
+    width:100%;
+    height:190px;                                               /*미디어쿼리 변경값*/
+    margin:0;
+    position:relative;
+}
+#days {
+    width:1295px;                                               /*미디어쿼리 변경값*/
+    height:25px;                                                /*미디어쿼리 변경값*/
+    margin:0 auto;
+    position:relative;
+    border-bottom: 3px solid #d15837;
+}
+
+/*메뉴 요소 레이아웃*/
+#menu ul {
+    margin:0;                                                   /*미디어쿼리 변경값(m,s,xs)*/
+    padding:0;
+    /*절반 차지, 오른쪽 정렬*/
+    width:50%;                                                  /*미디어쿼리 변경값(m,s,xs)*/
+    float:right;                                                /*미디어쿼리 변경값(m,s,xs)*/
+}
+#menu ul li {
+    /*가로 정렬*/
+    display: inline-block;
+    /*3등분, 오른쪽 정렬*/
+    width:33.33%;                                               
+    text-align: right;                                          /*미디어쿼리 변경값(m,s,xs)*/
+}
+
+/*제목 요소 레이아웃*/
+#title h1{
+    margin:0;
+    /*위치 지정*/
+    position:absolute;
+    top:70px;                                                   /*미디어쿼리 변경값*/
+    /*전체 너비에서 가운데 정렬*/
+    width:100%;
+    text-align: center;
+}
+#title p {
+    /*위치 지정*/
+    position:absolute;
+    top:100px;                                                  /*미디어쿼리 변경값*/
+    /*전체 너비에서 가운데 정렬*/
+    width:100%;
+    text-align: center;
+}
+
+/*요일 요소 레이아웃*/
+#days {
+    /*이 div에 속한 div들 사이의 여백 없애기 (font-size 활용)*/
+    font-size:0;
+    box-sizing:border-box;
+    padding:0 1px;
+}
+#days div {
+    /*가로 정렬*/
+    display:inline-block;
+    /*크기 및 위치 지정*/
+    width:40px;                                                 /*미디어쿼리 변경값*/
+    height:25px;                                                /*미디어쿼리 변경값*/
+    padding:0;
+    /*글자 위치 지정*/
+    text-align: center;
+}
+
+/*--------------------------------------메인 레이아웃--------------------------------------*/
+/*------------------메인 전체------------------*/
+#years ul, #months ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#years {
+    width:40px;                                                 /*미디어쿼리 변경값*/
+    height:1200px;                                              /*미디어쿼리 변경값*/
+    position:absolute;
+    left:0;                                                     /*미디어쿼리 변경값*/
+}
+#months {
+    width:80px;                                                 /*미디어쿼리 변경값*/
+    height:1200px;                                              /*미디어쿼리 변경값*/
+    position:absolute;
+    left:40px;                                                  /*미디어쿼리 변경값*/
+}
+#drawings {
+    width:980px;                                                /*미디어쿼리 변경값*/
+    height:1200px;                                              /*미디어쿼리 변경값*/
+    /*메인 박스에서 가운데 정렬*/
+    margin:0 auto;
+    /*그리드 시스템 적용*/
+    display:grid;
+    grid-template-columns: repeat(28, 1fr);                     /*미디어쿼리 변경값*/
+}
+
+/*---------------연,월 상세 레이아웃---------------*/
+/*연*/
+#years ul li {   
+    box-sizing: border-box;
+    /*기본 세로 길이*/
+    height:50px;                                                /*미디어쿼리 변경값(요소별로)*/
+    /*글자 위에 패딩 주기*/
+    padding-top:15px;                                           /*미디어쿼리 변경값*/
+}
+/*월*/
+#months ul li {
+    box-sizing: border-box;
+    /*기본 세로 길이*/
+    height:50px;                                                /*미디어쿼리 변경값(요소별로)*/
+    /*글자 위에 패딩 주기*/
+    padding-top:15px;                                           /*미디어쿼리 변경값*/
+}
+
+/*--------------이미지 박스 레이아웃---------------*/
+/*모든 박스 공통*/
+#drawings div {
+    position: relative;
+    font-size:0;
+    overflow:hidden;
+    /*크기*/
+    width:40px;                                                 /*미디어쿼리 변경값*/
+    height:50px;
+    /*테두리*/
+    outline:1px dotted #d15837;
+    /*애니메이션(날짜 박스 올라오게)*/
+    transition:all 0.2s;
+}
+/*드로잉 박스*/
+#drawings div img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+/*날짜 박스(기본)*/
+#drawings div div {
+    /*크기*/
+    box-sizing: border-box;
+    margin:0;
+    /*위치(그림과 겹치게)*/
+    position:absolute;
+    top:0;
+    z-index:3;
+    /*색상*/
+    background-color: #d15837;
+    /*위치*/
+    text-align:center;
+    padding:12px 0;                                            /*미디어쿼리 변경값*/      
+    /*마우스 오버 안할 때 안 보이게*/
+    opacity:0;
+}
+/*날짜 박스(마우스 오버 시)*/
+#drawings div:hover > div {
+    /*마우스 오버 시 보이게*/
+    opacity:1;
+}
+/*빈 박스*/
+#drawings .blank {
+    background-color:#fafbf5;
+}
+
+/*--------------------------------------푸터 레이아웃--------------------------------------*/
+footer p {
+    width:1295px;                                               /*미디어쿼리 변경값*/
+    margin:0 auto;
+    padding:60px 0;                                             /*미디어쿼리 변경값*/
+    text-align:center;
+    border-top:3px solid #d15837;
+}
+
+/*------------------------------------------글꼴------------------------------------------*/
+/*메뉴*/
+#menu ul li {
+    font: normal normal 300 1.2rem/1.4rem "Karla";              /*미디어쿼리 변경값*/
+    letter-spacing: 0.4px;                                     
+    color:#454545;
+} 
+/*제목*/
+#title h1 {
+    font: normal normal 800 2.5rem/3rem "Karla";                /*미디어쿼리 변경값*/
+    letter-spacing: 0.25rem;                                    
+    color:#d15837;
+} 
+/*설명*/
+#title p {
+    font: normal normal 300 1.2rem/1.4rem "Karla";              /*미디어쿼리 변경값*/
+    letter-spacing:0.025rem;                                        
+    color:#696969;
+} 
+/*요일*/
+#days div {
+    font: italic normal 600 1.1rem/1.5rem "Karla";              /*미디어쿼리 변경값*/
+    letter-spacing: 0.013rem;                                   
+    color:#696969;
+} 
+/*요일 - 토요일, 일요일*/
+#days div:nth-child(7n+6), #days div:nth-child(7n){ 
+    color:#d15837;
+} 
+/*연*/
+#years ul li {
+    font: italic normal 800 1rem/1.5rem "Karla";                /*미디어쿼리 변경값*/
+    color: #d15837;
+}
+/*월*/
+#months ul li {
+    font: italic normal 300 1.25rem/1.4rem "Karla";             /*미디어쿼리 변경값*/
+    letter-spacing: 0.013rem;
+    color: #d15837;
+}
+/*날짜 박스*/
+#drawings div div {
+    font: italic normal 300 12px "Karla";                       /*미디어쿼리 변경값*/
+    letter-spacing: 0.013rem;
+    color:white;
+}
+/*푸터*/
+footer p {
+    font : normal normal 300 1rem/1.2rem "Karla";               /*미디어쿼리 변경값*/   
+    letter-spacing: 0.013rem;
+    color: #696969;
+}
+
+/*------------------------------------스크롤 설정------------------------------------*/
+/*스크롤 시 필요한 헤더 배경, z-index값 정리*/
+#header-bg {
+    width:100%;
+    height:110px;                                               /*미디어쿼리 변경값*/
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:#fafbf5;
+    /*제목 텍스트보다 아래, 이미지 박스보다 위*/
+    z-index:5;
+}
+#menu, #title h1, #days {
+    /*헤더 배경보다 위*/
+    z-index:10;
+}
+#menu.scroll {
+    position:fixed;
+    top:0;
+    padding-top: 40px;                                          /*미디어쿼리 변경값*/
+}
+#title h1.scroll {
+    position:fixed;
+    top:50px;                                                   /*미디어쿼리 변경값*/
+    left:0;
+}
+#days.scroll {
+    position:fixed;
+    top:90px;                                                   /*미디어쿼리 변경값*/
+    left:calc(50% - 420px - 1px);                               /*미디어쿼리 변경값*/
+}
