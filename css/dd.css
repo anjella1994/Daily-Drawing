@@ -191,6 +191,19 @@ footer {
 #drawings .blank {
     background-color:#fafbf5;
 }
+/*대체 연도 박스 (only xs)*/
+#drawings div.xs_year {
+    height:17px;
+    padding-top:0;
+    outline:1px solid #d15837;
+    background-color:#d15837;
+    text-align:center;
+    /*기본은 안 보이게 설정(xs 버전에서만 보임)*/
+    display:none;
+}
+#drawings .blank.onlyxs {
+    display:none;
+}
 
 /*--------------------------------------푸터 레이아웃--------------------------------------*/
 footer p {
@@ -246,6 +259,11 @@ footer p {
     font: italic normal 300 12px "Karla";                       /*미디어쿼리 변경값*/
     letter-spacing: 0.013rem;
     color:white;
+}
+/*대체 연도 박스(only xs)*/
+#drawings div.xs_year {
+    font: italic normal 600 1rem/1.5rem "Karla";
+    color:#f4f5f0;
 }
 /*푸터*/
 footer p {

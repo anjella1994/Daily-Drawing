@@ -2,7 +2,7 @@
 <뷰포트 412px 미만> 
 박스 가로 : 반응형
 열 개수(요일) : 7개
-행 개수 : 97개 
+행 개수 : 99개 
 */
 
 
@@ -11,7 +11,7 @@ header {
     height:180px;
 }
 main {
-    height:4850px;                                      /*50px * 33행*/
+    height:calc(4950px + 51px);                                      /*50px * 99행 + 대체 연도 박스(17px*3)*/
 }
 footer {
     height:120px;
@@ -90,6 +90,13 @@ footer {
 /*빈 박스 없애기*/
 #drawings .xxl, #drawings .xl, #drawings .l, #drawings .s{
     display:none;
+}
+/*대체 연도 박스*/
+#drawings div.xs_year {
+    display:block;
+}
+#drawings .blank.onlyxs {
+    display:block;
 }
 
 /*--------------------------------------푸터 레이아웃--------------------------------------*/
