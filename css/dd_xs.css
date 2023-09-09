@@ -11,7 +11,7 @@ header {
     height:180px;
 }
 main {
-    height:calc(4950px + 51px);                                      /*50px * 99행 + 대체 연도 박스(17px*3)*/
+    height:5000px;                                      /*50px * 99행 + 대체 연도 박스(15px*3)*/
 }
 footer {
     height:120px;
@@ -73,7 +73,7 @@ footer {
 }
 #drawings {
     width:85%;                                          /*뷰포트의 85%*/
-    height:4850px;
+    height:5000px;
     grid-template-columns: repeat(7, 1fr);
 }
 
@@ -94,6 +94,7 @@ footer {
 /*대체 연도 박스*/
 #drawings div.xs_year {
     display:block;
+    width:100%;
 }
 #drawings .blank.onlyxs {
     display:block;
@@ -101,7 +102,7 @@ footer {
 
 /*--------------------------------------푸터 레이아웃--------------------------------------*/
 footer p {
-    width:85%;
+    width:calc(85% + 2px);
     padding:40px 0;
 }
 
@@ -125,6 +126,11 @@ html {
     top: 50px;
 }
 #days.scroll {
-    left:calc(7.5% - 1px);
     top: 90px !important; /*header-bg 길이 - 20px*/
+    left: calc(7.5% - 1px);
+}
+#drawings div.xs_year.scroll {
+    top: 110px;                                                 
+    left: 7.5%;              
+    width:85%;                      
 }

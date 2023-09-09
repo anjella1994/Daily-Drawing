@@ -2,30 +2,29 @@
 
 /*--------------------------------------전체 레이아웃--------------------------------------*/
 body {
-    background-color:#fafbf5;
+    background-color:#f0f0ee;
     margin:0;
 }
 header {
-    background-color:#fafbf5;
     width:100%;
-    height:300px;                                               /*미디어쿼리 변경값*/
+    height:220px;                                               /*미디어쿼리 변경값*/
     position:relative;
 }
 main {
     width:100%;                                            
-    height:1150px;                                              /*미디어쿼리 변경값*/
+    height:1650px;                                              /*미디어쿼리 변경값*/
     position:relative;
 }
 footer {
     width:100%;
-    height:260px;                                               /*미디어쿼리 변경값*/
+    height:200px;                                               /*미디어쿼리 변경값*/
     position:relative;
 }
 
 /*--------------------------------------헤더 레이아웃--------------------------------------*/
 #menu {
     width:100%;                                                 
-    height:85px;                                                /*미디어쿼리 변경값*/
+    height:80px;                                                /*미디어쿼리 변경값*/
     box-sizing:border-box;
     padding:60px 100px 0;                                       /*미디어쿼리 변경값*/
     margin:0;             
@@ -33,13 +32,13 @@ footer {
 }
 #title {
     width:100%;
-    height:190px;                                               /*미디어쿼리 변경값*/
+    height:120px;                                               /*미디어쿼리 변경값*/
     margin:0;
     position:relative;
 }
 #days {
-    width:1295px;                                               /*미디어쿼리 변경값*/
-    height:25px;                                                /*미디어쿼리 변경값*/
+    width:842px;                                                /*미디어쿼리 변경값*/
+    height:20px;                                                /*미디어쿼리 변경값*/
     margin:0 auto;
     position:relative;
     border-bottom: 3px solid #d15837;
@@ -66,7 +65,7 @@ footer {
     margin:0;
     /*위치 지정*/
     position:absolute;
-    top:70px;                                                   /*미디어쿼리 변경값*/
+    top:36px;                                                   /*미디어쿼리 변경값*/
     /*전체 너비에서 가운데 정렬*/
     width:100%;
     text-align: center;
@@ -74,7 +73,7 @@ footer {
 #title p {
     /*위치 지정*/
     position:absolute;
-    top:100px;                                                  /*미디어쿼리 변경값*/
+    top:57px;                                                  /*미디어쿼리 변경값*/
     /*전체 너비에서 가운데 정렬*/
     width:100%;
     text-align: center;
@@ -92,7 +91,7 @@ footer {
     display:inline-block;
     /*크기 및 위치 지정*/
     width:40px;                                                 /*미디어쿼리 변경값*/
-    height:25px;                                                /*미디어쿼리 변경값*/
+    height:20px;                                                /*미디어쿼리 변경값*/
     padding:0;
     /*글자 위치 지정*/
     text-align: center;
@@ -107,32 +106,39 @@ footer {
 }
 #years {
     width:40px;                                                 /*미디어쿼리 변경값*/
-    height:1200px;                                              /*미디어쿼리 변경값*/
+    height:1650px;                                              /*미디어쿼리 변경값*/
     position:absolute;
     left:0;                                                     /*미디어쿼리 변경값*/
 }
 #months {
     width:80px;                                                 /*미디어쿼리 변경값*/
-    height:1200px;                                              /*미디어쿼리 변경값*/
+    height:1750px;                                              /*미디어쿼리 변경값*/
     position:absolute;
-    left:40px;                                                  /*미디어쿼리 변경값*/
+    left:0px;                                                   /*미디어쿼리 변경값*/
 }
 #drawings {
-    width:980px;                                                /*미디어쿼리 변경값*/
-    height:1200px;                                              /*미디어쿼리 변경값*/
+    width:840px;                                                /*미디어쿼리 변경값*/
+    height:1650px;                                              /*미디어쿼리 변경값*/
     /*메인 박스에서 가운데 정렬*/
     margin:0 auto;
     /*그리드 시스템 적용*/
     display:grid;
-    grid-template-columns: repeat(28, 1fr);                     /*미디어쿼리 변경값*/
+    grid-template-columns: repeat(21, 1fr);                     /*미디어쿼리 변경값*/
+    position:relative;
 }
 
 /*---------------연,월 상세 레이아웃---------------*/
 /*연*/
+#years ul {
+    height:1650px;                                              /*미디어쿼리 변경값*/
+    position:relative;
+}
 #years ul li {   
     box-sizing: border-box;
     /*기본 세로 길이*/
-    height:50px;                                                /*미디어쿼리 변경값(요소별로)*/
+    height:50px;                                               
+    position:absolute;
+    top:0;                                                      /*미디어쿼리 변경값(요소별로)*/
     /*글자 위에 패딩 주기*/
     padding-top:15px;                                           /*미디어쿼리 변경값*/
 }
@@ -189,27 +195,32 @@ footer {
 }
 /*빈 박스*/
 #drawings .blank {
-    background-color:#fafbf5;
+    background-color:#f0f0ee;
 }
-/*대체 연도 박스 (only xs)*/
+#drawings .rest {
+    background-color:white;
+}
+/*대체 연도 박스 (only xs, s-480이하)*/
 #drawings div.xs_year {
-    height:17px;
+    grid-column: 1 / 8;
+    width:840px;                                                /*미디어쿼리 변경값*/
+    height:15px;
     padding-top:0;
     outline:1px solid #d15837;
     background-color:#d15837;
     text-align:center;
-    /*기본은 안 보이게 설정(xs 버전에서만 보임)*/
-    display:none;
+    /*기본은 안 보이게 설정(xs, s-480이하 버전에서만 보임)*/
+    display:none;                                               /*미디어쿼리 변경값(xs,s)*/
 }
 #drawings .blank.onlyxs {
-    display:none;
+    display:none;                                               /*미디어쿼리 변경값(xs,s)*/
 }
 
 /*--------------------------------------푸터 레이아웃--------------------------------------*/
 footer p {
-    width:1295px;                                               /*미디어쿼리 변경값*/
+    width:842px;                                                /*미디어쿼리 변경값*/
     margin:0 auto;
-    padding:60px 0;                                             /*미디어쿼리 변경값*/
+    padding:40px 0;                                             /*미디어쿼리 변경값*/
     text-align:center;
     border-top:3px solid #d15837;
 }
@@ -260,10 +271,16 @@ footer p {
     letter-spacing: 0.013rem;
     color:white;
 }
-/*대체 연도 박스(only xs)*/
+/*대체 연도 박스(only xs, s-480이하)*/
 #drawings div.xs_year {
     font: italic normal 600 1rem/1.5rem "Karla";
     color:#f4f5f0;
+    z-index:4;
+}
+/*휴일 박스*/
+#drawings .rest {
+    font: normal normal 400 0.8rem "Karla";
+    color:#d15837;
 }
 /*푸터*/
 footer p {
@@ -276,11 +293,11 @@ footer p {
 /*스크롤 시 필요한 헤더 배경, z-index값 정리*/
 #header-bg {
     width:100%;
-    height:110px;                                               /*미디어쿼리 변경값*/
+    height:150px;                                               /*미디어쿼리 변경값*/
     position:fixed;
     top:0;
     left:0;
-    background-color:#fafbf5;
+    background-color:#f0f0ee;
     /*제목 텍스트보다 아래, 이미지 박스보다 위*/
     z-index:5;
 }
@@ -295,11 +312,16 @@ footer p {
 }
 #title h1.scroll {
     position:fixed;
-    top:50px;                                                   /*미디어쿼리 변경값*/
+    top:83px;                                                   /*미디어쿼리 변경값*/
     left:0;
 }
 #days.scroll {
     position:fixed;
-    top:90px;                                                   /*미디어쿼리 변경값*/
+    top:130px;                                                  /*미디어쿼리 변경값*/
+    left:calc(50% - 420px - 1px);                               /*미디어쿼리 변경값*/
+}
+#drawings div.xs_year.scroll {
+    position:fixed;
+    top:220px;                                                  /*미디어쿼리 변경값*/
     left:calc(50% - 420px - 1px);                               /*미디어쿼리 변경값*/
 }

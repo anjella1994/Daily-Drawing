@@ -33,7 +33,6 @@ function scrollXs() {
         Days.style.top = "0px";
     }
 }
-
 function scrollS() {
     let windowTop = window.scrollY;
     if (windowTop >= 20 && windowTop < 36) { /*20 : 메뉴의 패딩 - 20, 45 : (메뉴의 길이 + 제목의 top) - (제목의 onscroll 탑)*/
@@ -60,7 +59,6 @@ function scrollS() {
         Days.style.top = "0px";
     }
 }
-
 function scrollM() {
     let windowTop = window.scrollY;
     if (windowTop >= 20 && windowTop < 36) { /*20 : 메뉴의 패딩 - 20, 45 : (메뉴의 길이 + 제목의 top) - (제목의 onscroll 탑)*/
@@ -87,16 +85,15 @@ function scrollM() {
         Days.style.top = "0px";
     }
 }
-
 function scrollL() {
     let windowTop = window.scrollY;
-    if (windowTop >= 20 && windowTop < 36) { /*20 : 메뉴의 패딩 - 20, 45 : (메뉴의 길이 + 제목의 top) - (제목의 onscroll 탑)*/
+    if (windowTop >= 20 && windowTop < 33) { /*20 : 메뉴의 패딩 - 20, 45 : (메뉴의 길이 + 제목의 top) - (제목의 onscroll 탑)*/
         Menu.classList.add("scroll");
         Title.classList.remove("scroll");
         Days.classList.remove("scroll");
         TitleAll.style.top = String(MenuHeight) + "px";
         Days.style.top = String(MenuHeight) + "px";
-    } else if (windowTop >= 36 && windowTop < 70) { /*70 : (메뉴의 길이 + 제목의 길이) - (요일의 onscroll 탑)*/ 
+    } else if (windowTop >= 33 && windowTop < 70) { /*70 : (메뉴의 길이 + 제목의 길이) - (요일의 onscroll 탑)*/ 
         Menu.classList.add("scroll");
         Title.classList.add("scroll");
         Days.classList.remove("scroll");
@@ -114,7 +111,6 @@ function scrollL() {
         Days.style.top = "0px";
     }
 }
-
 function scrollXl() {
     let windowTop = window.scrollY;
     if (windowTop >= 20 && windowTop < 40) { /*20 : 메뉴의 패딩 - 20, 45 : (메뉴의 길이 + 제목의 top) - (제목의 onscroll 탑)*/
@@ -141,7 +137,6 @@ function scrollXl() {
         Days.style.top = "0px";
     }
 }
-
 function scrollXxl() {
     let windowTop = window.scrollY;
     if (windowTop >= 20 && windowTop < 63) { /*20 : 메뉴의 패딩 - 20, 45 : (메뉴의 길이 + 제목의 top) - (제목의 onscroll 탑)*/
@@ -169,11 +164,79 @@ function scrollXxl() {
     }
 }
 
+let y20 = document.querySelector(".xs_year.y20");
+let y21 = document.querySelector(".xs_year.y21");
+let y22 = document.querySelector(".xs_year.y22");
+let Main = document.querySelector("main");
+let Footer = document.querySelector("footer");
+
+function scrollYearXs() {
+    let windowTop = window.scrollY;
+    if (windowTop >= 70 && windowTop < 1535) { 
+        y20.classList.add("scroll");
+        y21.classList.remove("scroll");
+        y22.classList.remove("scroll");
+        Main.style.top = "15px";
+        Footer.style.top = "15px";
+    } else if (windowTop >= 1535 && windowTop < 4200) {
+        y20.classList.remove("scroll");
+        y21.classList.add("scroll");
+        y22.classList.remove("scroll");
+        Main.style.top = "15px";
+        Footer.style.top = "15px";
+    } else if (windowTop >= 4200) {
+        y20.classList.remove("scroll");
+        y21.classList.remove("scroll");
+        y22.classList.add("scroll");
+        Main.style.top = "15px";
+        Footer.style.top = "15px";
+    } else {
+        y20.classList.remove("scroll");
+        y21.classList.remove("scroll");
+        y22.classList.remove("scroll");
+        Main.style.top = "0px";
+        Footer.style.top = "0px";
+    }
+}
+function scrollYearS() {
+    let windowTop = window.scrollY;
+    if (windowTop >= 70 && windowTop < 1550) { 
+        y20.classList.add("scroll");
+        y21.classList.remove("scroll");
+        y22.classList.remove("scroll");
+        Main.style.top = "15px";
+        Footer.style.top = "15px";
+    } else if (windowTop >= 1550 && windowTop < 4250) {
+        y20.classList.remove("scroll");
+        y21.classList.add("scroll");
+        y22.classList.remove("scroll");
+        Main.style.top = "15px";
+        Footer.style.top = "15px";
+    } else if (windowTop >= 4250) {
+        y20.classList.remove("scroll");
+        y21.classList.remove("scroll");
+        y22.classList.add("scroll");
+        Main.style.top = "15px";
+        Footer.style.top = "15px";
+    } else {
+        y20.classList.remove("scroll");
+        y21.classList.remove("scroll");
+        y22.classList.remove("scroll");
+        Main.style.top = "0px";
+        Footer.style.top = "0px";
+    }
+}
+
 /*미디어쿼리 별 스크롤 함수 실행*/
 if(matchMedia("screen and (max-width: 411px)").matches){
-    window.onscroll = scrollXs;
+    window.addEventListener("scroll", scrollXs);
+    window.addEventListener("scroll", scrollYearXs);
 }
-if(matchMedia("screen and (min-width: 411px) and (max-width: 819px)").matches){
+if(matchMedia("screen and (min-width: 412px) and (max-width: 480px").matches){
+    window.addEventListener("scroll", scrollS);
+    window.addEventListener("scroll", scrollYearS);
+}
+if(matchMedia("screen and (min-width: 481px) and (max-width: 819px)").matches){
     window.onscroll = scrollS;
 }
 if(matchMedia("screen and (min-width: 820px) and (max-width: 1179px)").matches){
@@ -198,4 +261,3 @@ window.onresize = function() {
     }
     beforeWidth = nowWidth;
 }
-

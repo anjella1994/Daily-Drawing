@@ -21,7 +21,7 @@ footer {
 /*헤더 전체*/
 #menu {
     height: 80px;                                       /*상부 패딩 60px + 메뉴 세로 길이*/
-    padding: 50px 100px 0;
+    padding: 60px 100px 0;
 }
 #title {
     height: 120px;
@@ -39,10 +39,10 @@ footer {
 
 /*제목*/
 #title h1{
-    top:39px;
+    top:36px;
 }
 #title p {
-    top:56px;
+    top:57px;
 }
 
 /*요일*/
@@ -52,7 +52,6 @@ footer {
 }
 
 /*--------------------------------------메인 레이아웃--------------------------------------*/
-
 #years {
     width:40px;
     height:1650px;
@@ -71,17 +70,20 @@ footer {
 
 /*---------------연,월 상세 레이아웃---------------*/
 /*연 요소별 위치*/
+#years ul {
+    height:1650px;
+}
 #years ul li {
     padding-top:15px;
 }
 #years ul li:nth-child(1) {
-    height: 450px;
+    top: 0px;
 }
 #years ul li:nth-child(2) {
-    height: 900px;
+    top: 450px;
 }
 #years ul li:nth-child(3) {
-    height: 300px;
+    top: 1350px;
 }
 /*월 요소별 위치*/
 #months ul li {
@@ -122,7 +124,7 @@ footer p {
 
 /*------------------------------------------글꼴------------------------------------------*/
 html {
-    font-size:11px;
+    font-size:12px;
 }
 
 /*--------------------------------------스크롤 설정-----------------------------------------*/
@@ -136,6 +138,6 @@ html {
     top: 83px;
 }
 #days.scroll {
-    left: calc(50% - 420px - 1px);
     top: 130px !important; /*header-bg 길이 - 20px*/
+    left: calc(50% - 420px - 1px);
 }

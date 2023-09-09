@@ -66,17 +66,20 @@ footer {
 
 /*---------------연,월 상세 레이아웃---------------*/
 /*연 요소별 위치*/
+#years ul {
+    height:1150px;
+}
 #years ul li {
     padding-top:15px;
 }
 #years ul li:nth-child(1) {
-    height: 350px;
+    top: 0px;
 }
 #years ul li:nth-child(2) {
-    height: 600px;
+    top: 350px;
 }
 #years ul li:nth-child(3) {
-    height: 200px;
+    top: 950px;
 }
 /*월 요소별 위치*/
 #months ul li {
@@ -115,24 +118,6 @@ html {
     top: 92px;
 }
 #days.scroll {
-    left: calc(50% - 740px - 1px);
     top: 155px !important; /*header-bg 길이 - 20px*/
+    left: calc(50% - 740px - 1px);
 }
-/*
-/*메뉴
-#menu ul li         {font: normal normal 300 1.2rem/1.4rem "Karla";} 
-/*제목
-#title h1           {font: normal normal 800 2.5rem/3rem "Karla";}   
-/*설명
-#title p            {font: normal normal 300 1.2rem/1.4rem "Karla";} 
-/*요일
-#days div           {font: italic normal 600 1.1rem/1.5rem "Karla";} 
-/*연
-#years ul li        {font: italic normal 800 1rem/1.5rem "Karla";}            
-/*월
-#months ul li       {font: italic normal 300 1.25rem/1.4rem "Karla";}            
-/*날짜 박스
-#drawings div div   {font: italic normal 300 12px "Karla";}
-/*푸터
-footer p            {font : normal normal 300 1rem/1.2rem "Karla";}
-*/

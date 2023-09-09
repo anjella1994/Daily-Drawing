@@ -71,17 +71,20 @@ footer {
 
 /*---------------연,월 상세 레이아웃---------------*/
 /*연 요소별 위치*/
+#years ul {
+    height:1250px;
+}
 #years ul li {
     padding-top:15px;
 }
 #years ul li:nth-child(1) {
-    height: 350px;
+    top: 0px;
 }
 #years ul li:nth-child(2) {
-    height: 650px;
+    top: 350px;
 }
 #years ul li:nth-child(3) {
-    height: 250px;
+    top: 1000px;
 }
 /*월 요소별 위치*/
 #months ul li {
@@ -127,8 +130,8 @@ html {
     top: 90px;
 }
 #days.scroll {
-    left: calc(50% - 560px - 1px);
     top: 145px !important; /*header-bg 길이 - 20px*/
+    left: calc(50% - 560px - 1px);
 }
 
 /*1680 이상일 때 박스 너비 45으로*/

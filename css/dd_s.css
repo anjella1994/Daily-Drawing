@@ -14,7 +14,7 @@ main {
     height:4850px;                                      /*50px * 33행*/
 }
 footer {
-    height:180px;
+    height:120px;
 }
 
 /*--------------------------------------헤더 레이아웃--------------------------------------*/
@@ -88,17 +88,20 @@ footer {
 
 /*---------------연,월 상세 레이아웃---------------*/
 /*연 요소별 위치*/
+#years ul {
+    height:4850px;
+}
 #years ul li {
     padding-top:15px;
 }
 #years ul li:nth-child(1) {
-    height: 700px;
+    top: 0px;
 }
 #years ul li:nth-child(2) {
-    height: 1300px;
+    top: 1400px;
 }
 #years ul li:nth-child(3) {
-    height: 450px;
+    top: 4000px;
 }
 /*월 요소별 위치*/
 #months ul li {
@@ -131,7 +134,7 @@ footer {
 
 /*--------------------------------------푸터 레이아웃--------------------------------------*/
 footer p {
-    width:350px;
+    width:352px;
     padding:40px 0;
 }
 
@@ -140,7 +143,7 @@ html {
     font-size:11px;
 }
 
-@media screen and (min-width:480px) and (max-width:639px) {
+@media screen and (min-width:480px) and (max-width:640px) {
     #months {
         display:none;
     }
@@ -152,7 +155,22 @@ html {
     #months, #years {
         display:none;
     }
+    /*대체 연도 박스*/
+    #drawings div.xs_year {
+        display:block;
+        width:350px;
+    }
+    #drawings .blank.onlyxs {
+        display:block;
+    }
+    main {
+        height:5045px;                                      /*3행 추가*/
+    }
+    #drawings {
+        height:5045px;
+    }
 }
+
 
 /*--------------------------------------스크롤 설정-----------------------------------------*/
 #header-bg {
@@ -165,6 +183,10 @@ html {
     top: 83px;
 }
 #days.scroll {
-    left: calc(50% - 175px - 1px);
     top: 130px !important; /*header-bg 길이 - 20px*/
+    left: calc(50% - 175px - 1px);
+}
+#drawings div.xs_year.scroll {
+    top:150px;                                                 
+    left: calc(50% - 175px);                                    
 }
