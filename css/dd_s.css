@@ -147,12 +147,17 @@ html {
     font-size:11px;
 }
 
-@media screen and (min-width:480px) and (max-width:640px) {
+
+@media screen and (min-width:480px) and (max-width:639px) {
     #months {
         display:none;
     }
     #years {
         left: calc(50% - 175px - 40px);
+    }
+    #years ul li.scroll {
+        top : 150px;
+        left : calc(50% - 175px - 40px) !important;
     }
 }
 @media screen and (min-width:412px) and (max-width:479px) {
@@ -173,6 +178,7 @@ html {
     #drawings {
         height:5045px;
     }
+
 }
 
 
@@ -196,5 +202,5 @@ html {
 }
 #years ul li.scroll {
     top : 150px;
-    left : calc(50% - 175px - 40px);
+    left : calc(50% - 175px - 120px);
 }
