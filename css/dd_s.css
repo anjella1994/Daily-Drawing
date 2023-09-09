@@ -105,16 +105,20 @@ footer {
 }
 /*월 요소별 위치*/
 #months ul li {
-    height:100%;
+    height:200px;
     padding:15px 0;
 }
 #months ul li:nth-child(1) {
-    height:50px;
+    height:100px;
 }
+#months ul li:nth-child(3),
 #months ul li:nth-child(6),
+#months ul li:nth-child(8),
 #months ul li:nth-child(12),
-#months ul li:nth-child(17) {
-    height:150px;
+#months ul li:nth-child(15),
+#months ul li:nth-child(17),
+#months ul li:nth-child(20) {
+    height:250px;
 }
 
 /*--------------이미지 박스 레이아웃---------------*/
@@ -189,4 +193,8 @@ html {
 #drawings div.xs_year.scroll {
     top:150px;                                                 
     left: calc(50% - 175px);                                    
+}
+#years ul li.scroll {
+    top : 150px;
+    left : calc(50% - 175px - 40px);
 }

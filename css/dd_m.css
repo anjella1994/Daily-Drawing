@@ -14,7 +14,7 @@ main {
     height:2450px;                                      /*50px * 33행*/
 }
 footer {
-    height:180px;
+    height:140px;
 }
 
 /*--------------------------------------헤더 레이아웃--------------------------------------*/
@@ -151,6 +151,10 @@ html {
     top: 130px !important; /*header-bg 길이 - 20px*/
     left: calc(50% - 280px - 1px);
 }
+#years ul li.scroll {
+    top : 150px;
+    left : calc(50% - 280px - 110px);
+}
 
 /*960 이상일 때 박스 너비 45으로*/
 @media screen and (min-width:960px) and (max-width:1179px) {
@@ -171,5 +175,8 @@ html {
     }
     #days.scroll {
         left: calc(50% - 315px - 1px);
+    }
+    #years ul li.scroll {
+        left : calc(50% - 315px - 120px);
     }
 }

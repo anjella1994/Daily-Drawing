@@ -327,3 +327,8 @@ footer p {
     top:220px;                                                  /*미디어쿼리 변경값*/
     left:calc(50% - 420px - 1px);                               /*미디어쿼리 변경값*/
 }
+#years ul li.scroll {
+    position:fixed;
+    top:0;                                                      /*미디어쿼리 변경값*/
+    left:0;                                                     /*미디어쿼리 변경값*/
+}

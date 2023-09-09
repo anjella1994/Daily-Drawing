@@ -164,9 +164,11 @@ function scrollXxl() {
     }
 }
 
+/*----------------연도 함수------------------*/
 let y20 = document.querySelector(".xs_year.y20");
 let y21 = document.querySelector(".xs_year.y21");
 let y22 = document.querySelector(".xs_year.y22");
+
 let Main = document.querySelector("main");
 let Footer = document.querySelector("footer");
 
@@ -198,7 +200,7 @@ function scrollYearXs() {
         Footer.style.top = "0px";
     }
 }
-function scrollYearS() {
+function scrollYearS1() {
     let windowTop = window.scrollY;
     if (windowTop >= 70 && windowTop < 1550) { 
         y20.classList.add("scroll");
@@ -227,23 +229,93 @@ function scrollYearS() {
     }
 }
 
+let Y20 = document.querySelector("#years .y20")
+let Y21 = document.querySelector("#years .y21")
+let Y22 = document.querySelector("#years .y22")
+
+let Years = document.querySelector("#years")
+
+function scrollYearS2() {
+    let windowTop = window.scrollY;
+    if (windowTop >= 70 && windowTop < 1470) {
+        Y20.classList.add("scroll");
+        Y21.classList.remove("scroll");
+        Y22.classList.remove("scroll");
+    } else if (windowTop >= 1470 && windowTop < 4070) {
+        Y20.classList.remove("scroll");
+        Y21.classList.add("scroll");
+        Y22.classList.remove("scroll");
+    } else if (windowTop > 4070) {
+        Y20.classList.remove("scroll");
+        Y21.classList.remove("scroll");
+        Y22.classList.add("scroll");
+    } else {
+        Y20.classList.remove("scroll");
+        Y21.classList.remove("scroll");
+        Y22.classList.remove("scroll");
+    }
+}
+function scrollYearM() {
+    let windowTop = window.scrollY;
+    if (windowTop >= 70 && windowTop < 770) {
+        Y20.classList.add("scroll");
+        Y21.classList.remove("scroll");
+        Y22.classList.remove("scroll");
+    } else if (windowTop >= 770 && windowTop < 2070) {
+        Y20.classList.remove("scroll");
+        Y21.classList.add("scroll");
+        Y22.classList.remove("scroll");
+    } else if (windowTop > 2070) {
+        Y20.classList.remove("scroll");
+        Y21.classList.remove("scroll");
+        Y22.classList.add("scroll");
+    } else {
+        Y20.classList.remove("scroll");
+        Y21.classList.remove("scroll");
+        Y22.classList.remove("scroll");
+    }
+}
+function scrollYearL() {
+    let windowTop = window.scrollY;
+    if (windowTop >= 70 && windowTop < 520) {
+        Y20.classList.add("scroll");
+        Y21.classList.remove("scroll");
+        Y22.classList.remove("scroll");
+    } else if (windowTop >= 520 && windowTop < 1420) {
+        Y20.classList.remove("scroll");
+        Y21.classList.add("scroll");
+        Y22.classList.remove("scroll");
+    } else if (windowTop > 1420) {
+        Y20.classList.remove("scroll");
+        Y21.classList.remove("scroll");
+        Y22.classList.add("scroll");
+    } else {
+        Y20.classList.remove("scroll");
+        Y21.classList.remove("scroll");
+        Y22.classList.remove("scroll");
+    }
+}
+
 /*미디어쿼리 별 스크롤 함수 실행*/
 if(matchMedia("screen and (max-width: 411px)").matches){
     window.addEventListener("scroll", scrollXs);
     window.addEventListener("scroll", scrollYearXs);
 }
-if(matchMedia("screen and (min-width: 412px) and (max-width: 480px").matches){
+if(matchMedia("screen and (min-width: 412px) and (max-width: 479px").matches){
     window.addEventListener("scroll", scrollS);
-    window.addEventListener("scroll", scrollYearS);
+    window.addEventListener("scroll", scrollYearS1);
 }
-if(matchMedia("screen and (min-width: 481px) and (max-width: 819px)").matches){
-    window.onscroll = scrollS;
+if(matchMedia("screen and (min-width: 480px) and (max-width: 819px)").matches){
+    window.addEventListener("scroll", scrollS);
+    window.addEventListener("scroll", scrollYearS2);
 }
 if(matchMedia("screen and (min-width: 820px) and (max-width: 1179px)").matches){
-    window.onscroll = scrollM;
+    window.addEventListener("scroll", scrollM);
+    window.addEventListener("scroll", scrollYearM);
 }
 if(matchMedia("screen and (min-width: 1180px) and (max-width: 1439px)").matches){
-    window.onscroll = scrollL;
+    window.addEventListener("scroll", scrollL);
+    window.addEventListener("scroll", scrollYearL);
 }
 if(matchMedia("screen and (min-width: 1440px) and (max-width: 1919px)").matches){
     window.onscroll = scrollXl;
