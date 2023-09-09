@@ -95,6 +95,7 @@ footer {
 #drawings div.xs_year {
     display:block;
     width:100%;
+    transition:none;
 }
 #drawings .blank.onlyxs {
     display:block;
@@ -133,5 +134,5 @@ html {
     top: 110px;                                                 
     left: 7.5%;              
     width:85%;           
-    transition:all 0s;      
+    transition: none;
 }
