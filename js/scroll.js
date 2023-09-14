@@ -6,7 +6,7 @@ let Days = document.querySelector("#days");
 let MenuHeight = Menu.clientHeight;
 
 
-/*미디어쿼리 별 스크롤 함수 선언*/
+/*----------------미디어쿼리 별 헤더 스크롤 함수 선언------------------*/
 function scrollXs() {
     let windowTop = window.scrollY;
     if (windowTop >= 20 && windowTop < 45) { /*20 : 메뉴의 패딩 - 20px, 45 : (메뉴의 길이 + 제목의 top) - (제목의 onscroll 탑)*/
@@ -164,7 +164,7 @@ function scrollXxl() {
     }
 }
 
-/*----------------연도 함수------------------*/
+/*----------------미디어쿼리 별 연도 스크롤 함수 선언------------------*/
 let y20 = document.querySelector(".xs_year.y20");
 let y21 = document.querySelector(".xs_year.y21");
 let y22 = document.querySelector(".xs_year.y22");
@@ -296,7 +296,7 @@ function scrollYearL() {
     }
 }
 
-/*미디어쿼리 별 스크롤 함수 실행*/
+/*-----------------------미디어쿼리 별 스크롤 함수 실행-----------------------*/
 if(matchMedia("screen and (max-width: 411px)").matches){
     window.addEventListener("scroll", scrollXs);
     window.addEventListener("scroll", scrollYearXs);
@@ -324,7 +324,7 @@ if(matchMedia("screen and (min-width: 1920px)").matches){
     window.onscroll = scrollXxl;
 }
 
-/*뷰포트 바뀌면 자동 새로고침*/
+/*-----------------------뷰포트 바뀌면 자동 새로고침-----------------------*/
 let beforeWidth = window.innerWidth;
 window.onresize = function() {
     const nowWidth = window.innerWidth;

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+html {
+    /*세로 전체 채우기*/
+    height:100vh;
+}
+body {
+    background-color: #f0f0ee;
+    /*세로 전체 채우기 + 마진 없애기*/
+    margin:0;
+}
+
+/* ------------------ 전체 레이아웃 ------------------ */
+/* 이미지가 보여지는 영역 박스 */
+#container {
+    width: calc(100vw - 160px);
+    height: calc(100vh - 60px);
+    margin: 0 auto;
+    margin-top: 30px;
+    overflow: hidden;
+    font-size: 0;
+    position:relative;
+}
+/* 모든 이미지가 나열되어 있는 가로로 긴 슬라이드 */
+#imageslide {
+    position:absolute;
+    left:0;
+    width: calc(647 * (100vw - 160px));
+    height: calc(100vh - 60px);
+    text-align: center;
+}
+/* 이미지 슬라이드를 구성하고 있는 날짜별 박스 */
+#imageslide div {
+    float: left;
+    width: calc(100vw - 160px);
+    height: calc(100vh - 60px);
+}
+
+
+/* ------------------ 버튼 ------------------ */
+
+.arrow:hover, .close:hover, .arrow img:hover, .close img:hover {
+    cursor: pointer;
+}
+/* 버튼1 : 화살표 */
+.arrow {
+    width: 80px;
+    height: calc(100vh - 60px);
+    position:fixed;
+    text-align:center;
+    z-index:5;
+}
+.left {
+    top:30px;
+    left:0;
+}
+.right {
+    top:30px;
+    left: calc(100vw - 80px);
+}
+.arrow img {
+    position:relative;
+    top: calc(50% - 88px);
+}
+/* 버튼2 : 닫기 */
+.close {
+    width: 80px;
+    height: 80px;
+    position:fixed;
+    top:0;
+    left:calc(100vw - 80px);
+    text-align: center;
+    z-index: 10;
+}
+.close img {
+    margin-top:25px;
+    width: 30px;
+}
+
+/* ------------------ 내용 ------------------ */
+
+/*그림*/
+#imageslide img {
+    height:calc(100vh - 140px);
+    object-fit: contain;
+    margin: 0 auto;
+    border:1px solid #aaa;
+}
+/*제목*/
+p.title {
+    height:45px;
+    margin:0;
+    padding-top:10px;
+    font: normal normal 300 1.2rem "Gothic A1";
+}
+/*날짜*/
+p.date {
+    position:relative;
+    height:30px;
+    margin:0;
+    font: normal normal 300 1rem "Karla";
+    color: #d15837;
+}
