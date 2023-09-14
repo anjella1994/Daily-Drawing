@@ -81,10 +81,10 @@ body {
 
 /*그림*/
 #imageslide img {
+    width:calc(100vw - 160px);
     height:calc(100vh - 140px);
     object-fit: contain;
     margin: 0 auto;
-    border:1px solid #aaa;
 }
 /*제목*/
 p.title {
@@ -100,4 +100,23 @@ p.date {
     margin:0;
     font: normal normal 300 1rem "Karla";
     color: #d15837;
+}
+
+@media screen and (max-width:568px) {
+    .arrow {
+        display:none;
+    }
+    #container {
+        width:calc(100vw - 50px);
+    }
+    #imageslide {
+        width:calc(647 * (100vw - 50px));
+    }
+    #imageslide div {
+        width:calc(100vw - 50px);
+    }
+    #imageslide img {
+        width:100%;
+        height:calc(100vh - 140px);
+    }
 }

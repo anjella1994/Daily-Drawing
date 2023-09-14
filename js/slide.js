@@ -33,9 +33,36 @@ function Left() {
 RightArrow.addEventListener("click", Right);
 LeftArrow.addEventListener("click", Left);
 
-// ------------- 닫기 누르면 이전 페이지로 돌아가기 ------------- //
 
-// let CloseButton = document.querySelector(".close");
-// CloseButton.addEventListener("click", function(){
-//     window.location.href = "index.html";
-// })
+/*-------------------------- 터치 슬라이더 --------------------------*/
+let touchStartX = 0;
+let touchEndX = 0;
+
+ImageSlide.addEventListener("touchstart", (e) => {
+    touchStartX = e.touches[0].clientX;
+});
+
+ImageSlide.addEventListener("touchmove", (e) => {
+    touchEndX = e.touches[0].clientX;
+});
+
+ImageSlide.addEventListener("touchend", () => {
+    const deltaX = touchEndX - touchStartX;
+    if (deltaX > 0) {
+        // Swipe right (previous image)
+        Left();
+    } else if (deltaX < 0) {
+        // Swipe left (next image)
+        Right();
+    }
+});
+
+/*-----------------------뷰포트 바뀌면 자동 새로고침-----------------------*/
+let beforeWidth = window.innerWidth;
+window.onresize = function() {
+    const nowWidth = window.innerWidth;
+    if (beforeWidth != nowWidth) {
+        document.location.reload();
+    }
+    beforeWidth = nowWidth;
+}
