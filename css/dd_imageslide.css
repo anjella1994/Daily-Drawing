@@ -30,7 +30,7 @@ body {
     text-align: center;
 }
 /* 이미지 슬라이드를 구성하고 있는 날짜별 박스 */
-#imageslide div {
+#imageslide > div {
     float: left;
     width: calc(100vw - 160px);
     height: calc(100vh - 60px);
@@ -103,6 +103,9 @@ p.date {
 }
 
 @media screen and (max-width:568px) {
+    html {
+        font-size: 11px;
+    }
     .arrow {
         display:none;
     }
@@ -112,7 +115,7 @@ p.date {
     #imageslide {
         width:calc(647 * (100vw - 50px));
     }
-    #imageslide div {
+    #imageslide>div {
         width:calc(100vw - 50px);
     }
     #imageslide img {
