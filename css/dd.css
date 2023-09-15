@@ -194,6 +194,7 @@ footer {
 #drawings div:hover > div {
     /*마우스 오버 시 보이게*/
     opacity:1;
+    cursor:pointer;
 }
 /*빈 박스*/
 #drawings .blank {
