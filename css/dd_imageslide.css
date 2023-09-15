@@ -128,7 +128,7 @@ p.date {
         width:calc(647 * (100vw - 50px));
     }
     #imageslide > div {
-        margin-top:50px;
+        margin-top:40px;
         width:calc(100vw - 50px);
     }
     #imageslide .imgcontainer {
