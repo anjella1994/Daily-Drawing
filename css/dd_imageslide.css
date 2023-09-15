@@ -132,12 +132,14 @@ p.date {
     }
     #imageslide .imgcontainer {
         width:calc(100vw - 50px);
+        height:calc(100vh - 220px);
     }
     #imageslide .border {
         width:calc(100vw - 50px - 2px);
+        height:calc(100vh - 220px - 2px);
     }
     #imageslide img {
         width:100%;
-        height:calc(100vh - 140px);
+        height:calc(100vh - 220px);
     }
 }
