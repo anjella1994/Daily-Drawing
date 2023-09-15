@@ -127,19 +127,20 @@ p.date {
     #imageslide {
         width:calc(647 * (100vw - 50px));
     }
-    #imageslide>div {
+    #imageslide > div {
+        margin-top:50px;
         width:calc(100vw - 50px);
     }
     #imageslide .imgcontainer {
         width:calc(100vw - 50px);
-        height:calc(100vh - 220px);
+        height:calc(100vh - 300px);
     }
     #imageslide .border {
         width:calc(100vw - 50px - 2px);
-        height:calc(100vh - 220px - 2px);
+        height:calc(100vh - 300px - 2px);
     }
     #imageslide img {
         width:100%;
-        height:calc(100vh - 220px);
+        height:calc(100vh - 300px);
     }
 }
