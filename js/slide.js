@@ -11,6 +11,13 @@ i = urlParam.get('drawing'); //쿼리스트링의 url매개변수 중 drawing의
 
 ImageSlide.style.transform = `translate(-${(i-1) * ImageWidth}px)`; //(그림 번호 - 1)만큼 이동시킨 뜸 
 
+// ------------- 쿼리 스트링 변경 함수 미리 지정 ---------------- //
+
+function updateQueryString() {
+    urlParam.set('drawing', i.toString());
+    const newUrl = 'ImageSlide.html' + '?' + urlParam.toString();
+    window.history.replaceState({},'',newUrl);
+}
 
 // ------------- 왼쪽 오른쪽 화살표 누르면 그림 이동하도록 설정하기 ------------- //
 
@@ -20,14 +27,20 @@ let RightArrow = document.querySelector(".right img");
 
 function Right() {
     i++;
+    //이미지 슬라이드 이동
     ImageSlide.style.transform = `translate(-${(i-1) * ImageWidth}px)`;
     ImageSlide.style.transition = "0.5s";
+    //쿼리 스트링 변경
+    updateQueryString();
 }
 
 function Left() {
     i--;
+    //이미지 슬라이드 이동
     ImageSlide.style.transform = `translate(-${(i-1) * ImageWidth}px)`;
     ImageSlide.style.transition = "0.5s";
+    //쿼리 스트링 변경
+    updateQueryString();
 }
 
 RightArrow.addEventListener("click", Right);
